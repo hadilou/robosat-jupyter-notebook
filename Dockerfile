@@ -9,7 +9,7 @@ RUN pip3 install jupyter
 # Install E84's fork of robosat repo
 RUN cd /tmp && \
 	git clone https://github.com/Element84/robosat && \
-	apt-get install rsync && \
+	apt-get install -y rsync && \
 	rsync -av /tmp/robosat/ /app
 
 # Create the directory used to store checkpoints during learning
